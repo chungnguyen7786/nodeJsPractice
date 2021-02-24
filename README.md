@@ -1,0 +1,1 @@
+This repo is used to store the practical exercises of NodeJs
