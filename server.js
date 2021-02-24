@@ -11,12 +11,14 @@ var todos = ['Đi chợ', 'Nấu cơm', 'Rửa bát', 'Học code tại CodersX'
 app.set('view engine', 'pug');
 app.set('views', './');
 
-// https://expressjs.com/en/starter/basic-routing.html
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 app.get("/", (request, response) => {
   response.send("I love CodersX");
 });
 
-app.get("/todos", (req, res) => {
+app.get('/todos', (req, res) => {
   var q = req.query.q;
   var matchedTodos;
   if (q === undefined) {
@@ -25,10 +27,15 @@ app.get("/todos", (req, res) => {
     matchedTodos = todos.filter((todo) => {
       return todo.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
-  }
-  
-  res.render("index.pug", {todos: matchedTodos});
+  }  
+  res.render("todos.pug", {todos: matchedTodos});
 });
+
+app.post('/todos/create', (req, res) => {
+    todos.push(req.body.todo);
+    res.redirect('back');
+});
+
 
 // listen for requests :)
 app.listen(process.env.PORT, () => {
