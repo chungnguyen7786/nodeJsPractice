@@ -6,10 +6,10 @@
 var express = require("express");
 var app = express();
 
-var todos = ["Đi chợ", "Nấu cơm", "Rửa bát", "Học code tại CodersX"];
+var todos = ['Đi chợ', 'Nấu cơm', 'Rửa bát', 'Học code tại CodersX'];
 
-app.set("view engine", "pug");
-app.set("views", "./");
+app.set('view engine', 'pug');
+app.set('views', './');
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
@@ -22,12 +22,12 @@ app.get("/todos", (req, res) => {
   if (q === undefined) {
     matchedTodos = todos;
   } else {
-    matchedTodos = todos.filter(todo => {
+    matchedTodos = todos.filter((todo) => {
       return todo.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
   }
-
-  res.render("index.pug", { todos: matchedTodos });
+  
+  res.render("index.pug", {todos: matchedTodos});
 });
 
 // listen for requests :)
