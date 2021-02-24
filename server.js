@@ -3,11 +3,13 @@
 
 // we've started you off with Express (https://expressjs.com/)
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
-const express = require("express");
-const app = express();
+var express = require("express");
+var app = express();
 
-app.set('view engine', 'pug');
-app.set('views', './');
+var todos = ["Đi chợ", "Nấu cơm", "Rửa bát", "Học code tại CodersX"];
+
+app.set("view engine", "pug");
+app.set("views", "./");
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
@@ -15,7 +17,17 @@ app.get("/", (request, response) => {
 });
 
 app.get("/todos", (req, res) => {
-  res.render("index.pug");
+  var q = req.query.q;
+  var matchedTodos;
+  if (q === undefined) {
+    matchedTodos = todos;
+  } else {
+    matchedTodos = todos.filter(todo => {
+      return todo.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+    });
+  }
+
+  res.render("index.pug", { todos: matchedTodos });
 });
 
 // listen for requests :)
