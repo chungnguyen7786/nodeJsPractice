@@ -1,0 +1,17 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "blah"
+    },
+    {
+      "text": "đi chợ"
+    },
+    {
+      "text": "nấu cơm"
+    },
+    {
+      "text": "quét nhà"
+    }
+  ]
+}

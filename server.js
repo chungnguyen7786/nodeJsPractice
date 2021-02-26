@@ -6,7 +6,12 @@
 var express = require("express");
 var app = express();
 
-var todos = ['Đi chợ', 'Nấu cơm', 'Rửa bát', 'Học code tại CodersX'];
+var low = require('lowdb');
+var FileSync = require('lowdb/adapters/FileSync');
+var adapter = new FileSync('db.json');
+var db = low(adapter);
+
+var todos = db.get('todos').value();
 
 app.set('view engine', 'pug');
 app.set('views', './');
@@ -20,22 +25,21 @@ app.get("/", (request, response) => {
 
 app.get('/todos', (req, res) => {
   var q = req.query.q;
-  var matchedTodos;
+  var matchedTodos;    
   if (q === undefined) {
     matchedTodos = todos;
   } else {
     matchedTodos = todos.filter((todo) => {
-      return todo.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+      return todo.text.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
   }  
   res.render("todos.pug", {todos: matchedTodos});
 });
 
 app.post('/todos/create', (req, res) => {
-    todos.push(req.body.todo);
+    db.get('todos').push(req.body).write();
     res.redirect('back');
 });
-
 
 // listen for requests :)
 app.listen(process.env.PORT, () => {

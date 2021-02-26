@@ -4,9 +4,9 @@ form(action="/todos", method="GET")
   button search
 ul 
    each todo in todos
-     li= todo
+     li= todo.text
      
 h3 Create new task
 form(action="/todos/create", method="POST")
-  input(type="text", name="todo")
+  input(type="text", name="text")
   button Create task
