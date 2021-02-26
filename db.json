@@ -1,17 +1,24 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "blah"
+      "text": "Đi chợ",
+      "id": "QYsGg9ATQ"
     },
     {
-      "text": "đi chợ"
+      "text": "Nấu cơm",
+      "id": "ksDLYxC9s"
     },
     {
-      "text": "nấu cơm"
+      "text": "Quét nhà",
+      "id": "qfZBGVdbu"
     },
     {
-      "text": "quét nhà"
+      "text": "Rửa bát",
+      "id": "DAYZxhfhh"
+    },
+    {
+      "text": "Giặt quần áo",
+      "id": "ulriT4X7i"
     }
   ]
 }

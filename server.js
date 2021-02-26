@@ -11,6 +11,8 @@ var FileSync = require('lowdb/adapters/FileSync');
 var adapter = new FileSync('db.json');
 var db = low(adapter);
 
+var shortid = require('shortid');
+
 var todos = db.get('todos').value();
 
 app.set('view engine', 'pug');
@@ -36,7 +38,18 @@ app.get('/todos', (req, res) => {
   res.render("todos.pug", {todos: matchedTodos});
 });
 
+app.get('/todos/:id/delete', (req, res) => {   
+    var id = req.params.id;
+    var todos = db.get('todos').value();
+    var todo = db.get('todos').find({id: id}).value();
+    var i = todos.indexOf(todo);
+    todos.splice(i, 1);
+    res.redirect('back');
+});
+
+
 app.post('/todos/create', (req, res) => {
+    req.body.id = shortid.generate();
     db.get('todos').push(req.body).write();
     res.redirect('back');
 });
