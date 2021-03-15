@@ -11,6 +11,17 @@
       "id": "aO1feN5Py"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "name": "Chung Nguyen",
+      "phone": "0900000000",
+      "id": "aO2feN5Py"
+    },
+    {
+      "name": "Phan Ninh",
+      "phone": "0913333111",
+      "id": "SQ0-1pW_U"
+    }
+  ],
   "count": 0
 }
