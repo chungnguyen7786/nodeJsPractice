@@ -1,19 +1,21 @@
-h1 Edit user
-a(href="/users") Back
-p 
-  b Name: 
-  pan= user.name
-  br
-  b Phone number: 
-  pan= user.phone
-  br
-form(action="/users/" + user.id + "/edit", method="POST")
-  label New name:
-  input(type="text", name="name")
-  br
-  br
-  label New phone number:
-  textarea(name="phone")
-  br
-  br
-  button Edit user
+extends ../layouts/common.pug
+block content
+  h1 Edit user
+  a(href="/users") Back
+  p 
+    b Name: 
+    pan= user.name
+    br
+    b Phone number: 
+    pan= user.phone
+    br
+  form(action="/users/" + user.id + "/edit", method="POST")
+    label New name:
+    input(type="text", name="name")
+    br
+    br
+    label New phone number:
+    textarea(name="phone")
+    br
+    br
+    button Edit user

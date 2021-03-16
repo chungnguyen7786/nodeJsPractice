@@ -1,17 +1,18 @@
-h1 Create a transaction
-a(href="/transactions") Back
-form(action="/transactions/add", method="POST")
-  label Choose user:
-  select(name="userId")
-    each user in users
-      option(value=user.name) #{user.name}
-  br
-  br
-  label Choose book:
-  select(name="bookId")
-    each book in books
-      option(value=book.tit) #{book.tit}
-  br
-  br
-  button Create
-  
+extends ../layouts/common.pug
+block content
+  h1 Create a transaction
+  a(href="/transactions") Back
+  form(action="/transactions/add", method="POST")
+    label Choose user:
+    select(name="userId")
+      each user in users
+        option(value=user.name) #{user.name}
+    br
+    br
+    label Choose book:
+    select(name="bookId")
+      each book in books
+        option(value=book.tit) #{book.tit}
+    br
+    br
+    button Create

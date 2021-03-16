@@ -1,0 +1,23 @@
+extends ../layouts/common.pug
+block content
+  h1 Transactions complete
+  a(href="/transactions") Back
+  br
+  br
+  label= transaction.userId
+  span &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+  label= transaction.bookId
+  span &nbsp;&nbsp;&nbsp;
+  label Is Complete:
+  label= transaction.isComplete
+  br
+  br
+  form(action="/transactions/" + transaction.id + "/complete", method="POST")
+    label Is Complete:
+    select(name="isComplete")
+      each option in isComplete
+        option(value=option) #{option}
+    br
+    button Submit
+
+  

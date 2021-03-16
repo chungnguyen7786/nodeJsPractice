@@ -9,6 +9,16 @@
       "tit": "Gone with the Wind",
       "des": "It  is a 1939 American epic historical romance film adapted from the 1936 novel by Margaret Mitchell.",
       "id": "aO1feN5Py"
+    },
+    {
+      "tit": "The power of Now",
+      "des": "The power of Now",
+      "id": "WxLFZBpL_"
+    },
+    {
+      "tit": "Đảo giấu vàng",
+      "des": "Đảo giấu vàng",
+      "id": "fFRpCdd9y"
     }
   ],
   "users": [
@@ -32,12 +42,20 @@
     {
       "userId": "Chung Nguyen",
       "bookId": "The Adventures of Tom Sawyer",
-      "id": "aO2feN5Zy"
+      "id": "aO2feN5Zy",
+      "isComplete": "false"
     },
     {
       "userId": "Ninh Phan",
       "bookId": "Gone with the Wind",
-      "id": "ITfGVZFlm"
+      "id": "ITfGVZFlm",
+      "isComplete": "false"
+    },
+    {
+      "userId": "Lan Nguyen",
+      "bookId": "Đảo giấu vàng",
+      "id": "enfCp6SIW",
+      "isComplete": "false"
     }
   ]
 }

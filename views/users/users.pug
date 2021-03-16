@@ -1,16 +1,18 @@
-h1 Users List
-a(href="/") Back
-form(action="/users", method="GET")
-  input(type="text", name="q")
-  button Search
-ul 
-   each user in users
-     li
-       label= user.name
-       span &nbsp;&nbsp;&nbsp;
-       a(href="/users/" + user.id + "/delete") delete
-       span &nbsp;&nbsp;&nbsp;
-       a(href="/users/" + user.id + "/view") view
+extends ../layouts/common.pug
+block content
+  h1 Users List
+  a(href="/") Back
+  form(action="/users", method="GET")
+    input(type="text", name="q")
+    button Search
+  ul 
+     each user in users
+       li
+         label= user.name
+         span &nbsp;&nbsp;&nbsp;
+         a(href="/users/" + user.id + "/delete") delete
+         span &nbsp;&nbsp;&nbsp;
+         a(href="/users/" + user.id + "/view") view
 
-a(href="/users/add") Add more user
+  a(href="/users/add") Add more user
      

@@ -10,4 +10,8 @@ route.get("/add", controller.create);
 
 route.post('/add', controller.postCreate);
 
+route.get("/:id/complete", controller.complete);
+
+route.post("/:id/complete", controller.postComplete);
+
 module.exports = route;  

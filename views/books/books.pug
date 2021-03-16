@@ -1,14 +1,16 @@
-h1 Books List
-a(href="/") Back
-form(action="/books", method="GET")
-  input(type="text", name="q")
-  button Search
-ul 
-   each book in books
-     li
-       label= book.tit
-       span &nbsp;&nbsp;&nbsp;
-       a(href="/books/" + book.id + "/delete") delete
+extends ../layouts/common.pug
+block content
+  h1 Books List
+  a(href="/") Back
+  form(action="/books", method="GET")
+    input(type="text", name="q")
+    button Search
+  ul 
+     each book in books
+       li
+         label= book.tit
+         span &nbsp;&nbsp;&nbsp;
+         a(href="/books/" + book.id + "/delete") delete
 
-a(href="/books/add") Add more books
+  a(href="/books/add") Add more books
      

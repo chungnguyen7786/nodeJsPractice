@@ -1,12 +1,14 @@
-h1 Add a new user
-a(href="/users") Back
-form(action="/users/add", method="POST")
-  label User name:
-  input(type="text", name="name")
-  br
-  br
-  label Phone number:
-  textarea(name="phone")
-  br
-  br
-  button Add user
+extends ../layouts/common.pug
+block content
+  h1 Add a new user
+  a(href="/users") Back
+  form(action="/users/add", method="POST")
+    label User name:
+    input(type="text", name="name")
+    br
+    br
+    label Phone number:
+    textarea(name="phone")
+    br
+    br
+    button Add user
