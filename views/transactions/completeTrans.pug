@@ -7,17 +7,19 @@ block content
   label= transaction.userId
   span &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
   label= transaction.bookId
-  span &nbsp;&nbsp;&nbsp;
-  label Is Complete:
+  span &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+  label Is complete:
+  span &nbsp;
   label= transaction.isComplete
   br
   br
   form(action="/transactions/" + transaction.id + "/complete", method="POST")
     label Is Complete:
+    span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     select(name="isComplete")
       each option in isComplete
         option(value=option) #{option}
-    br
+    span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     button Submit
 
   

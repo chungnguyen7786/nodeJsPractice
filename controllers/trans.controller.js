@@ -29,6 +29,8 @@ module.exports.complete = (req, res) => {
   var transaction = db.get('transactions').find({id: id}).value();
     if (transaction) {
       res.render('./transactions/completeTrans.pug', {transaction: transaction, isComplete: isComplete});
+    } else {
+      res.render('./transactions/trans.pug', {transactions: transactions})
     };
 };
 
