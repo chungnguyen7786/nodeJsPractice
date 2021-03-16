@@ -5,8 +5,9 @@ var shortid = require('shortid');
 
 var db = require('./db.js');
 
-var userRoute = require('./user.route.js');
-var bookRoute = require('./book.route.js');
+var userRoute = require('./routes/user.route.js');
+var bookRoute = require('./routes/book.route.js');
+var transRoute = require('./routes/trans.route.js');
 
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 
 app.use('/users', userRoute);
 app.use('/books', bookRoute);
+app.use('/transactions', transRoute);
 
 // listen for requests :)
 app.listen(process.env.PORT, () => {

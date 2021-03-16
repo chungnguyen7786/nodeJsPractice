@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "tit": "The Adventures of Tom Sawyer ",
+      "tit": "The Adventures of Tom Sawyer",
       "des": "It  is an 1876 novel by Mark Twain about a young boy growing up along the Mississippi River",
       "id": "CVwJfREmN"
     },
@@ -21,7 +21,23 @@
       "name": "Ninh Phan",
       "phone": "0913111333",
       "id": "SQ0-1pW_U"
+    },
+    {
+      "name": "Lan Nguyen",
+      "phone": "0989888999",
+      "id": "wZ_5RasS7"
     }
   ],
-  "count": 0
+  "transactions": [
+    {
+      "userId": "Chung Nguyen",
+      "bookId": "The Adventures of Tom Sawyer",
+      "id": "aO2feN5Zy"
+    },
+    {
+      "userId": "Ninh Phan",
+      "bookId": "Gone with the Wind",
+      "id": "ITfGVZFlm"
+    }
+  ]
 }

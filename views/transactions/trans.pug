@@ -1,0 +1,11 @@
+h1 Transactions List
+a(href="/") Back
+form(action="/transactions", method="GET")  
+ul 
+   each transaction in transactions
+     li
+       label= transaction.userId
+       span &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+       label= transaction.bookId
+
+a(href="/transactions/add") Create more transactions
