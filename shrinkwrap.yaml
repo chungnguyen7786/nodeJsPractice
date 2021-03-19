@@ -2,6 +2,7 @@ dependencies:
   cookie-parser: 1.4.5
   express: 4.17.1
   lowdb: 1.0.0
+  md5: 2.3.0
   pug: 3.0.0
   shortid: 2.2.16
 packages:
@@ -96,6 +97,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=
+  /charenc/0.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
   /constantinople/4.0.1:
     dependencies:
       '@babel/parser': 7.13.4
@@ -136,6 +141,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
+  /crypt/0.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -315,6 +324,10 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-M4Sjn6N/+O6/IXSJseKqHoFc+5FdGJ22sXqnjTpdZweHK64MzEPAyQZyEU3R/KRv2GLoa7nNtg/C2Ev6m7z+eA==
+  /is-buffer/1.1.6:
+    dev: false
+    resolution:
+      integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
   /is-core-module/2.2.0:
     dependencies:
       has: 1.0.3
@@ -368,6 +381,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-2+x8esE/Wb9SQ1F9IHaYWfsC9FIecLOPrK4g17FGEayjUWH172H6nwicRovGvSE2CPZouc2MCIqCI7h9d+GftQ==
+  /md5/2.3.0:
+    dependencies:
+      charenc: 0.0.2
+      crypt: 0.0.2
+      is-buffer: 1.1.6
+    dev: false
+    resolution:
+      integrity: sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -721,5 +742,6 @@ specifiers:
   cookie-parser: ^1.4.5
   express: ^4.17.1
   lowdb: ^1.0.0
+  md5: ^2.3.0
   pug: ^3.0.0
   shortid: ^2.2.16

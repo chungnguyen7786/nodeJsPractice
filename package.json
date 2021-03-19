@@ -14,7 +14,8 @@
     "pug": "^3.0.0",
     "lowdb": "^1.0.0",
     "shortid": "^2.2.16",
-    "cookie-parser": "^1.4.5"
+    "cookie-parser": "^1.4.5",
+    "md5": "^2.3.0"
   },
   "engines": {
     "node": "12.x"
