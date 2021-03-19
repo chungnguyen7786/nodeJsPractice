@@ -4,20 +4,19 @@ var route = express.Router();
 
 var controller = require('../controllers/user.controller.js');
 var validate = require('../validate/user.validate.js');
-var cookie = require('../cookies/count.cookie.js');
 
-route.get('/', cookie.count, controller.index);
+route.get('/', controller.index);
 
-route.get('/:id/delete', cookie.count, controller.delete);
+route.get('/:id/delete', controller.delete);
 
-route.get("/add", cookie.count, controller.create);
+route.get("/add", controller.create);
 
-route.post('/add', cookie.count, validate.postCreate, controller.postCreate);
+route.post('/add', validate.postCreate, controller.postCreate);
 
-route.get('/:id/view', cookie.count, controller.view);
+route.get('/:id/view', controller.view);
 
-route.get("/:id/edit", cookie.count, controller.edit);
+route.get("/:id/edit", controller.edit);
 
-route.post('/:id/edit', cookie.count, controller.postEdit);
+route.post('/:id/edit', controller.postEdit);
 
 module.exports = route;  
