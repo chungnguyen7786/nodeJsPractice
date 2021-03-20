@@ -25,11 +25,11 @@
     {
       "name": "Chung Nguyen",
       "phone": "0900000000",
-      "email": "cn@gmail.com",
+      "email": "chungnguyen.hut@gmail.com",
       "password": "$2b$10$1skEvRx7/.wwXva/vGe0CO9MCXvE.8tuH5.L8RhD.THAbAWxaCkSq",
       "id": "aO2feN5Py",
       "isAdmin": "true",
-      "wrongLoginCount": 2
+      "wrongLoginCount": 4
     },
     {
       "name": "Ninh Phan",

@@ -1,4 +1,5 @@
 dependencies:
+  '@sendgrid/mail': 7.4.2
   bcrypt: 5.0.1
   cookie-parser: 1.4.5
   express: 4.17.1
@@ -41,6 +42,32 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CUBdThIZMoLEQQxACwhLsPg/puxBca0abTH3ixuvBQkhjJ80Hdp99jmVjxFCOa52/tZqN9d70IbGUf+OuKDHGA==
+  /@sendgrid/client/7.4.2:
+    dependencies:
+      '@sendgrid/helpers': 7.4.2
+      axios: 0.21.1
+    dev: false
+    engines:
+      node: 6.* || 8.* || >=10.*
+    resolution:
+      integrity: sha512-bu8lLbRD+OV7YsYNemEy8DRoxs8/8u325EXNlQ3VaqhcpbM0eSvdL5e5Wa7VZpbczcNCJmf/sr/uqFmwcO5S+A==
+  /@sendgrid/helpers/7.4.2:
+    dependencies:
+      deepmerge: 4.2.2
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-b/IyBwT4zrOfXA0ISvWZsnhYz+5uAO20n68J8n/6qe5P1E2p0L7kWNTN5LYu0S7snJPUlbEa6FpfrSKzEcP9JA==
+  /@sendgrid/mail/7.4.2:
+    dependencies:
+      '@sendgrid/client': 7.4.2
+      '@sendgrid/helpers': 7.4.2
+    dev: false
+    engines:
+      node: 6.* || 8.* || >=10.*
+    resolution:
+      integrity: sha512-hvIOnm8c3zVyDnJcyBuAeujmpKX56N3D/LpiZrFuLHjAz4iEHrmL2sJ3iU9O6hxcb07gd1CES+z9Fg7FBT26uQ==
   /@tootallnate/once/1.1.2:
     dev: false
     engines:
@@ -110,6 +137,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TaTivMB6pYI1kXwrFlEhLeGfOqoDNdTxjCdwRfFFkEA30Eu+k48W34nlok2EYWJfFFzqaEmichdNM7th6M5HNw==
+  /axios/0.21.1:
+    dependencies:
+      follow-redirects: 1.13.3
+    dev: false
+    resolution:
+      integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   /babel-walk/3.0.0-canary-5:
     dependencies:
       '@babel/types': 7.13.0
@@ -261,6 +294,12 @@ packages:
       node: '>=6.0'
     resolution:
       integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+  /deepmerge/4.2.2:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
   /delegates/1.0.0:
     dev: false
     resolution:
@@ -357,6 +396,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==
+  /follow-redirects/1.13.3:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
   /forwarded/0.1.2:
     dev: false
     engines:
@@ -1148,6 +1193,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@sendgrid/mail': ^7.4.2
   bcrypt: ^5.0.1
   cookie-parser: ^1.4.5
   express: ^4.17.1

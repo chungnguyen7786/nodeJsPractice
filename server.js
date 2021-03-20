@@ -19,7 +19,7 @@ app.set("views", "./views");
 
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser('qggh23w32h3y3h3ju3u'));
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 app.use(express.static("public"));
 
