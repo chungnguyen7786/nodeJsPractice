@@ -27,28 +27,33 @@
       "phone": "0900000000",
       "email": "cn@gmail.com",
       "password": "$2b$10$1skEvRx7/.wwXva/vGe0CO9MCXvE.8tuH5.L8RhD.THAbAWxaCkSq",
-      "id": "aO2feN5Py"
+      "id": "aO2feN5Py",
+      "isAdmin": "true",
+      "wrongLoginCount": 2
     },
     {
       "name": "Ninh Phan",
       "phone": "0913111333",
       "email": "np@gmail.com",
       "password": "$2b$10$1skEvRx7/.wwXva/vGe0CO9MCXvE.8tuH5.L8RhD.THAbAWxaCkSq",
-      "id": "SQ0-1pW_U"
+      "id": "SQ0-1pW_U",
+      "isAdmin": "false"
     },
     {
       "name": "Lan Nguyen",
       "phone": "0989888999",
       "email": "ln@gmail.com",
       "password": "$2b$10$1skEvRx7/.wwXva/vGe0CO9MCXvE.8tuH5.L8RhD.THAbAWxaCkSq",
-      "id": "wZ_5RasS7"
+      "id": "wZ_5RasS7",
+      "isAdmin": "false"
     },
     {
       "name": "Duc Nguyen",
       "phone": "0900000000",
       "email": "dn@gmail.com",
       "password": "$2b$10$1skEvRx7/.wwXva/vGe0CO9MCXvE.8tuH5.L8RhD.THAbAWxaCkSq",
-      "id": "91f27Ec6-"
+      "id": "91f27Ec6-",
+      "isAdmin": "false"
     }
   ],
   "transactions": [
@@ -71,5 +76,5 @@
       "isComplete": "false"
     }
   ],
-  "cookieCount": 27
+  "cookieCount": 0
 }
